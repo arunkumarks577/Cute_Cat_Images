@@ -56,14 +56,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final Thread.UncaughtExceptionHandler defaultEH = Thread.getDefaultUncaughtExceptionHandler();
-        Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
-            @Override
-            public void uncaughtException(Thread thread, Throwable e) {
-                String msg = e.getMessage();
-                int mj = 0;
-            }
-        });
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
         catDBHelper = new CatDBHelper(MainActivity.this);
