@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
-        final Call<List<Cats>> call = jsonPlaceHolderApi.getCats(10);
+        final Call<List<Cats>> call = jsonPlaceHolderApi.getCats(25);
         RetrofitInitialCall(call);
 
 
